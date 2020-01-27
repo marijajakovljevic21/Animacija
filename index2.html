@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Animacija</title>
+    <style>
+     
+     body{
+          margin: 100px auto;
+          width: 1000px;
+          background-color: #050210;}
+    
+   #krug{
+        margin:100px auto ;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+       
+
+    }
+    #krug::before{
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+        filter: blur(80px);
+       animation: prva 1s infinite linear;
+       
+    }
+       
+      
+
+#unutra{
+    margin: 100px auto;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        background-color:#000050;
+        transform: translateY(25px);
+}
+        
+#unutra::before{
+        content: "";
+       margin: 100px 100px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: whitesmoke solid 0px;
+       border-radius: 100%;
+        background-color: white;
+        
+        filter:opacity(5%);
+        filter:brightness(7%);
+       animation: druga 1s infinite;
+       
+       
+}
+@keyframes druga{
+    0%{
+        
+        transform:scale(1, 1)
+    }
+    25%{
+        transform: scale(1.75, 1.75);
+        
+    }
+    50%{
+        transform: scale(2.5, 2.5);
+    }
+    75%{
+        transform: scale(3.5, 3.5);
+    }
+    100%{
+        transform: scale(5, 5);
+    }
+}
+   
+        
+
+   
+    
+    
+    @keyframes prva{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+   }
+   
+  
+   
+    
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div id="krug">
+        <div id="unutra">
+           
+    </div>
+  
+
+    </div>
+    
+</div>
+</body>
+</html>
